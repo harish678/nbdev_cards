@@ -12,6 +12,9 @@ entries:
     - output: web,pdf
       title: Card
       url: card.html
+    - output: web,pdf
+      title: Deck
+      url: deck.html
     output: web
     title: nbdev_cards
   output: web

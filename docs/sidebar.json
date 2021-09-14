@@ -1,6 +1,7 @@
 {
   "nbdev_cards": {
     "Overview": "/",
-    "Card": "card.html"
+    "Card": "card.html",
+    "Deck": "deck.html"
   }
 }
