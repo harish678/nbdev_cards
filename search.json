@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "card.html",
+    "href": "card.html",
+    "title": "card -> A basic playing card",
+    "section": "",
+    "text": "We will be using numbers to represent playing card clubs and ranks as they are lists underlying.\nThese are the suits:\nThese are the ranks:\nHere’s an example of creating and displaying a card:"
+  },
+  {
+    "objectID": "card.html#comparison-operators",
+    "href": "card.html#comparison-operators",
+    "title": "card -> A basic playing card",
+    "section": "Comparison operators",
+    "text": "Comparison operators\nEquality, less than, and greater than work on the rank and suit indices.\nFor instance, here’s a test of equality…\n\ntest_eq(Card(suit=1, rank=3), Card(suit=1, rank=3))\n\nand a test of <…\n\nassert Card(suit=1, rank=3) < Card(suit=2, rank=3)\n\nand finally a test of >…\n\nassert Card(suit=3, rank=3) > Card(suit=2, rank=3)\nassert not Card(suit=1, rank=3) > Card(suit=2, rank=3)"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "nbdev_cards",
+    "section": "",
+    "text": "A deck of cards demo of nbdev based on ideas from Think Python 2nd Edition by Allen B. Downey."
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "nbdev_cards",
+    "section": "Install",
+    "text": "Install\npip install nbdev-cards"
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "nbdev_cards",
+    "section": "How to use",
+    "text": "How to use\nThis lib provides a Card class you can use to create, display, and compare playing cards:\n\nCard(suit=1, rank=3)\n\n3 ♦️\n\n\nSuits are numbered according to this list:\n\nsuits\n\n['♣️', '♦️', '❤️', '♠️']\n\n\nThis lib provides a Deck class you can use to create, display, shuffle, remove and draw playing cards from a deck:\n\ndeck = Deck()\ndeck\n\nA ♣️; 2 ♣️; 3 ♣️; 4 ♣️; 5 ♣️; 6 ♣️; 7 ♣️; 8 ♣️; 9 ♣️; 10 ♣️; J ♣️; Q ♣️; K ♣️; A ♦️; 2 ♦️; 3 ♦️; 4 ♦️; 5 ♦️; 6 ♦️; 7 ♦️; 8 ♦️; 9 ♦️; 10 ♦️; J ♦️; Q ♦️; K ♦️; A ❤️; 2 ❤️; 3 ❤️; 4 ❤️; 5 ❤️; 6 ❤️; 7 ❤️; 8 ❤️; 9 ❤️; 10 ❤️; J ❤️; Q ❤️; K ❤️; A ♠️; 2 ♠️; 3 ♠️; 4 ♠️; 5 ♠️; 6 ♠️; 7 ♠️; 8 ♠️; 9 ♠️; 10 ♠️; J ♠️; Q ♠️; K ♠️\n\n\n\ndraw_n(n = 13)\n\n[9 ♣️, 3 ♦️, 7 ♠️, 7 ♦️, 8 ♣️, Q ❤️, 8 ♣️, 3 ❤️, 3 ❤️, 3 ♠️, 6 ❤️, Q ♦️, Q ♠️]"
+  },
+  {
+    "objectID": "INFO.html",
+    "href": "INFO.html",
+    "title": "nbdev-cards",
+    "section": "",
+    "text": "nbdev_bump_version              Increment version in settings.ini by one\nnbdev_clean                     Clean all notebooks in `fname` to avoid merge conflicts\nnbdev_conda                     Create and upload a conda package\nnbdev_create_config             Create a config file\nnbdev_deploy                    Deploy docs to GitHub Pages\nnbdev_docs                      Generate docs\nnbdev_export                    Export notebooks in `path` to Python modules\nnbdev_filter                    A notebook filter for Quarto\nnbdev_fix                       Create working notebook from conflicted notebook `nbname`\nnbdev_ghp_deploy                Deploy docs in `doc_path` from settings.ini to GitHub Pages\nnbdev_help                      Show help for all console scripts\nnbdev_install                   Install Quarto and the current library\nnbdev_install_hooks             Install git hooks to clean and trust notebooks automatically\nnbdev_install_quarto            Install latest Quarto on macOS or Linux, prints instructions for Windows\nnbdev_migrate_directives        Convert all directives in `fname` from v1 to v2\nnbdev_new                       Create a new project from the current git repo\nnbdev_prepare                   Export, test, and clean notebooks\nnbdev_preview                   Start a local docs webserver\nnbdev_pypi                      Create and upload Python package to PyPI\nnbdev_quarto                    Create Quarto docs and README.md\nnbdev_release                   Release both conda and PyPI packages\nnbdev_sidebar                   Create sidebar.yml\nnbdev_test                      Test in parallel notebooks matching `fname`, passing along `flags`\nnbdev_trust                     Trust notebooks matching `fname`\nnbdev_update                    Propagate change in modules matching `fname` to notebooks that created them"
+  },
+  {
+    "objectID": "INFO.html#test-package-locally",
+    "href": "INFO.html#test-package-locally",
+    "title": "nbdev-cards",
+    "section": "test package locally",
+    "text": "test package locally\nOnce the notebooks has been exported using nbdev_export command, the package will be created in the present working directory.\nRun the command pip install -e . to install the generated package to install locally."
+  },
+  {
+    "objectID": "deck.html",
+    "href": "deck.html",
+    "title": "deck",
+    "section": "",
+    "text": "When we initially create a deck, all of the cards will be present:\n\ndeck = Deck()\ndeck\n\nA ♣️; 2 ♣️; 3 ♣️; 4 ♣️; 5 ♣️; 6 ♣️; 7 ♣️; 8 ♣️; 9 ♣️; 10 ♣️; J ♣️; Q ♣️; K ♣️; A ♦️; 2 ♦️; 3 ♦️; 4 ♦️; 5 ♦️; 6 ♦️; 7 ♦️; 8 ♦️; 9 ♦️; 10 ♦️; J ♦️; Q ♦️; K ♦️; A ❤️; 2 ❤️; 3 ❤️; 4 ❤️; 5 ❤️; 6 ❤️; 7 ❤️; 8 ❤️; 9 ❤️; 10 ❤️; J ❤️; Q ❤️; K ❤️; A ♠️; 2 ♠️; 3 ♠️; 4 ♠️; 5 ♠️; 6 ♠️; 7 ♠️; 8 ♠️; 9 ♠️; 10 ♠️; J ♠️; Q ♠️; K ♠️\n\n\nCheck if there are indeed 52 cards in the Deck\n\ntest_eq(len(deck), 52)\n\nWe can check if, say, the Ace of Clubs is in the deck:\nAs a reminder, these are the suits we defined for a Card:\n\nsuits\n\n['♣️', '♦️', '❤️', '♠️']\n\n\n\nCard(suit=1, rank=1) in deck\n\nTrue\n\n\n\n\n\n\nDeck.pop\n\n Deck.pop (idx:int=-1)\n\nRemove one card from the deck\n\n\n\n\n\n\n\n\n\n\nType\nDefault\nDetails\n\n\n\n\nidx\nint\n-1\n# The index of the card to remove, defaulting to the last one\n\n\nReturns\nCard\n\n\n\n\n\n\n\n\n\ndeck = Deck()\n\ntest_eq(deck.pop(), Card(suit=3, rank=13))  # K♠️\n\nThere are 51 cards left in the deck now.\n\ntest_eq(len(deck), 51)\n\n\n\n\n\nDeck.remove\n\n Deck.remove (card:nbdev_cards.card.Card)\n\nRemoves card from the deck or raises exception if it is not there\n\n\n\n\nType\nDetails\n\n\n\n\ncard\nCard\nCard to remove\n\n\nReturns\nNone\n\n\n\n\n\n\n\n\ncard23 = Card(2, 3)\ndeck.remove(card23)\n\nassert card23 not in deck\n\n\n\n\n\nDeck.shuffle\n\n Deck.shuffle ()\n\nShuffles the cards in this deck\n\n\n\n\n\n\n\ndraw_n\n\n draw_n (n:int, replace:bool=True)\n\nDraw n cards, with replacement iif replace\n\n\n\n\nType\nDefault\nDetails\n\n\n\n\nn\nint\n\nnumber of cards to draw\n\n\nreplace\nbool\nTrue\nwhether or not draw with replacement\n\n\n\n\n\n\n\ndraw_n(13, replace=False)\n\n[9 ♣️, 5 ♦️, 9 ❤️, 5 ♣️, 3 ♣️, A ♠️, Q ♣️, 3 ♦️, 6 ♠️, K ♦️, 10 ♦️, 8 ♣️, 3 ❤️]\n\n\n\ndraw_n(13)\n\n[J ♦️, 6 ♦️, 2 ❤️, 5 ♣️, 2 ♣️, 4 ♣️, 2 ♣️, J ♠️, Q ❤️, 10 ♣️, 4 ♦️, 9 ♦️, 7 ♦️]"
+  }
+]
